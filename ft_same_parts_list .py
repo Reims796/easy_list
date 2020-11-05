@@ -6,9 +6,9 @@ def ft_len_mass(mass):
 
 
 def ft_same_parts_list(mass):
-    x = 0
     a = list()
     i = 1
+    x = 0
     for i in range(0, ft_len(mass)):
         if (mass[i] > 0 and mass[i-1] > 0) or (mass[i] < 0 and mass[i-1] < 0):
             x += 1
