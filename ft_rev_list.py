@@ -6,7 +6,8 @@ def ft_len(str):
 
 
 def ft_rev_list(mass):
-    a = ''
-    for i in range(-1, -ft_len(mass) - 1, -1):
-        a += mass[i]
-    return a
+    for i in range(0, ft_len(mass) // 2):
+        x = mass[i]
+        mass[i] = mass[-(i + 1)]
+        mass[-(i + 1)] = x
+    return mass
