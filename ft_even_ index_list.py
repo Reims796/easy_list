@@ -6,10 +6,7 @@ def ft_len_mass(mass):
 
 
 def ft_even_index_list(mass):
-    d = ft_len_mass(mass)
-    i = 0
     x = []
-    for i in range(d):
-        if i % 2 == 0:
-            x.append(mass[i])
+    for i in range(0, ft_len_mass(mass), 2):
+        x.append(mass[i])
     return x
