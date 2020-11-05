@@ -6,11 +6,15 @@ def ft_len_mass(mass):
 
 
 def ft_same_parts_list(mass):
-    d = ft_len_mass(mass)
     x = 0
-    i = 0
-    for i in range(d):
-        if mass[i] > mass[i - 1] and i > 0:
+    a = list()
+    i = 1
+    for i in range(0, ft_len(mass)):
+        if (mass[i] > 0 and mass[i-1] > 0) or (mass[i] < 0 and mass[i-1] < 0):
             x += 1
-        i += 1
-    return x
+        if mass[i] == 0 and mass[i-1] == 0:
+            x += 1
+    if x == 0:
+        return False
+    if x > 0:
+        return True
