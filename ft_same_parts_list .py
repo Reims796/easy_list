@@ -14,7 +14,7 @@ def ft_same_parts_list(mass):
             x += 1
         if mass[i] == 0 and mass[i-1] == 0:
             x += 1
-    if x == 0:
-        return False
     if x > 0:
         return True
+    if x == 0:
+        return False
