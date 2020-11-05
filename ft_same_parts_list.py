@@ -1,7 +1,15 @@
+def len_list(mass):
+    a = 0
+    for i in mass:
+        a += 1
+    return a
+
+
 def ft_same_parts_list(mass):
-    f = len(mass)
+    f = ft_len_list(mass)
     x = False
-    for i in range(0, f):
-        if mass[i - 1] < 0 and mass[i] < 0 or mass[i - 1] > 0 and mass[i] > 0:
-            x = True
-    return x
+    z = True
+    for i in range(1, ft_len_list(mass)):
+        if mas[i] == mass[i-1]:
+            return z
+        return x
