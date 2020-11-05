@@ -6,10 +6,6 @@ def ft_len(str):
 
 
 def ft_rshift_list(mass):
-    a = ft_len(mass)
-    x = []
-    for i in range (a):
-        x.append(mass[i-1])
-    for i in range (a):
-        mass[i] = x[i]
+    mass.insert(0, mass[-1])
+    mass.pop()
     return mass
