@@ -6,31 +6,12 @@ def ft_len(str):
 
 
 def ft_super_shift_list(mass, n):
-    i = 0
-    d = ft_len(mass)
-    x = []
-    z = d
-    if n >= 0:
+    if n > 0:
         for i in range(n):
-            x.append(mass[d - 1])
-            d -= 1
-            i += 1
-        i = 0
-        for i in range(z - n):
-            x.append(mass[i])
-            i += 1
-        return r
-    else:
-        i = n - n * 2
-        for i in range(d):
-            x.append(mass[i])
-            i += 1
-
-        i = 0
-        while i > n:
-            x.append(mass[i - i * 2])
-            i += 1
-        return x
-
-
-
+            mass.insert(0, mass[-1])
+            mass.pop()
+    elif n < 0:
+        for i in range(n * -1):
+            mass.insert(len_list(mass), mass[0])
+            mass.pop(0)
+    return mass
